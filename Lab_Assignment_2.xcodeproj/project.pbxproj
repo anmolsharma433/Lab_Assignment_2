@@ -14,6 +14,10 @@
 		265EEA2A23D76FAE0019911B /* Lab_Assignment_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA2823D76FAE0019911B /* Lab_Assignment_2.xcdatamodeld */; };
 		265EEA2C23D76FAE0019911B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265EEA2B23D76FAE0019911B /* Assets.xcassets */; };
 		265EEA2F23D76FAE0019911B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265EEA2D23D76FAE0019911B /* LaunchScreen.storyboard */; };
+		265EEA3823D77E4C0019911B /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA3723D77E4C0019911B /* CoreData.swift */; };
+		265EEA3A23D77E810019911B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA3923D77E810019911B /* TableViewController.swift */; };
+		265EEA3C23D77E9B0019911B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA3B23D77E9B0019911B /* TableViewCell.swift */; };
+		265EEA3E23D795550019911B /* modelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA3D23D795550019911B /* modelClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		265EEA2B23D76FAE0019911B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		265EEA2E23D76FAE0019911B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265EEA3023D76FAE0019911B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265EEA3723D77E4C0019911B /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		265EEA3923D77E810019911B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		265EEA3B23D77E9B0019911B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		265EEA3D23D795550019911B /* modelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,28 @@
 		265EEA1E23D76FAD0019911B /* Lab_Assignment_2 */ = {
 			isa = PBXGroup;
 			children = (
+				265EEA3623D77DB50019911B /* TableViewControllers */,
+				265EEA3723D77E4C0019911B /* CoreData.swift */,
+				265EEA2823D76FAE0019911B /* Lab_Assignment_2.xcdatamodeld */,
 				265EEA1F23D76FAE0019911B /* AppDelegate.swift */,
 				265EEA2123D76FAE0019911B /* SceneDelegate.swift */,
-				265EEA2323D76FAE0019911B /* ViewController.swift */,
 				265EEA2523D76FAE0019911B /* Main.storyboard */,
 				265EEA2B23D76FAE0019911B /* Assets.xcassets */,
 				265EEA2D23D76FAE0019911B /* LaunchScreen.storyboard */,
 				265EEA3023D76FAE0019911B /* Info.plist */,
-				265EEA2823D76FAE0019911B /* Lab_Assignment_2.xcdatamodeld */,
 			);
 			path = Lab_Assignment_2;
+			sourceTree = "<group>";
+		};
+		265EEA3623D77DB50019911B /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				265EEA3923D77E810019911B /* TableViewController.swift */,
+				265EEA3B23D77E9B0019911B /* TableViewCell.swift */,
+				265EEA2323D76FAE0019911B /* ViewController.swift */,
+				265EEA3D23D795550019911B /* modelClass.swift */,
+			);
+			path = TableViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				265EEA2423D76FAE0019911B /* ViewController.swift in Sources */,
+				265EEA3A23D77E810019911B /* TableViewController.swift in Sources */,
+				265EEA3E23D795550019911B /* modelClass.swift in Sources */,
 				265EEA2A23D76FAE0019911B /* Lab_Assignment_2.xcdatamodeld in Sources */,
 				265EEA2023D76FAE0019911B /* AppDelegate.swift in Sources */,
 				265EEA2223D76FAE0019911B /* SceneDelegate.swift in Sources */,
+				265EEA3C23D77E9B0019911B /* TableViewCell.swift in Sources */,
+				265EEA3823D77E4C0019911B /* CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
