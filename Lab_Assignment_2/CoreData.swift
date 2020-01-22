@@ -84,32 +84,7 @@ class CoreData: UIViewController {
         
     }
     
-    func updateData()
-    {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{return}
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        //preparing the request of type NsFetchRequestfor the entity
-        let fetchRequest : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Task")
-        fetchRequest.predicate = NSPredicate(format: "", "")
-        do{
-            let test = try managedContext.fetch(fetchRequest)
-            
-            //            for user in (test as? [NSManagedObject])! {
-            //                user.setValue("abc", forKey: "name")
-            //            }
-            do{
-                try managedContext.save()
-            }
-            catch let error as NSError{
-                print("Error Could not save Data. \(error),\(error.userInfo)")
-            }
-        }
-        catch{
-            print(error)
-        }
-    }
+   
     
     func deleteData()
     {

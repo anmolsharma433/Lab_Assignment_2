@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2656AEC423D7D4B40017EA85 /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656AEC323D7D4B40017EA85 /* editViewController.swift */; };
 		265EEA2023D76FAE0019911B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA1F23D76FAE0019911B /* AppDelegate.swift */; };
 		265EEA2223D76FAE0019911B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA2123D76FAE0019911B /* SceneDelegate.swift */; };
 		265EEA2423D76FAE0019911B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265EEA2323D76FAE0019911B /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2656AEC323D7D4B40017EA85 /* editViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewController.swift; sourceTree = "<group>"; };
 		265EEA1C23D76FAD0019911B /* Lab_Assignment_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab_Assignment_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		265EEA1F23D76FAE0019911B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		265EEA2123D76FAE0019911B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2656AEC023D7D46E0017EA85 /* editVc */ = {
+			isa = PBXGroup;
+			children = (
+				2656AEC323D7D4B40017EA85 /* editViewController.swift */,
+			);
+			path = editVc;
+			sourceTree = "<group>";
+		};
 		265EEA1323D76FAD0019911B = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		265EEA1E23D76FAD0019911B /* Lab_Assignment_2 */ = {
 			isa = PBXGroup;
 			children = (
+				2656AEC023D7D46E0017EA85 /* editVc */,
 				265EEA3623D77DB50019911B /* TableViewControllers */,
 				265EEA3723D77E4C0019911B /* CoreData.swift */,
 				265EEA2823D76FAE0019911B /* Lab_Assignment_2.xcdatamodeld */,
@@ -165,6 +176,7 @@
 				265EEA3A23D77E810019911B /* TableViewController.swift in Sources */,
 				265EEA3E23D795550019911B /* modelClass.swift in Sources */,
 				265EEA2A23D76FAE0019911B /* Lab_Assignment_2.xcdatamodeld in Sources */,
+				2656AEC423D7D4B40017EA85 /* editViewController.swift in Sources */,
 				265EEA2023D76FAE0019911B /* AppDelegate.swift in Sources */,
 				265EEA2223D76FAE0019911B /* SceneDelegate.swift in Sources */,
 				265EEA3C23D77E9B0019911B /* TableViewCell.swift in Sources */,

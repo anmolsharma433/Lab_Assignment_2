@@ -81,6 +81,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To Do List" id="EQn-ZE-gQE">
+                        <barButtonItem key="leftBarButtonItem" title="Sort By Name" id="k0C-0h-FEI">
+                            <connections>
+                                <action selector="sortByName:" destination="93O-nx-BF6" id="pbx-ME-BBG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add Task" id="BhX-VL-qvX">
                             <connections>
                                 <segue destination="Fx1-jP-k7k" kind="show" id="Lbd-sc-gvf"/>
@@ -189,6 +194,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZo-hh-7d7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1068.1159420289855" y="126.5625"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="su7-Fa-v4K">
+            <objects>
+                <viewController storyboardIdentifier="editViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vx9-5h-fqp" customClass="editViewController" customModule="Lab_Assignment_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QAo-7n-HBR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Iml-fg-ubR">
+                                <rect key="frame" x="30" y="74" width="354" height="354"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5m-th-wXJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="34"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CPz-lO-7Sc">
+                                        <rect key="frame" x="0.0" y="64" width="324" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Days Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-CV-htA">
+                                        <rect key="frame" x="0.0" y="128" width="295" height="34"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wcR-gG-pCn">
+                                        <rect key="frame" x="0.0" y="192" width="324" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Of Days Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLr-hD-Qcb">
+                                        <rect key="frame" x="0.0" y="256" width="318" height="34"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="y6B-F9-uwf">
+                                        <rect key="frame" x="0.0" y="320" width="324" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="y6B-F9-uwf" secondAttribute="trailing" constant="30" id="9kG-Qd-DxW"/>
+                                    <constraint firstAttribute="trailing" secondItem="wcR-gG-pCn" secondAttribute="trailing" constant="30" id="IpY-NU-iGE"/>
+                                    <constraint firstAttribute="trailing" secondItem="CPz-lO-7Sc" secondAttribute="trailing" constant="30" id="egL-kO-6hF"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUj-Sy-VB5">
+                                <rect key="frame" x="125" y="556" width="107" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Update Task"/>
+                                <connections>
+                                    <action selector="saveTask:" destination="vx9-5h-fqp" eventType="touchUpInside" id="Zle-Ca-zie"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Iml-fg-ubR" firstAttribute="leading" secondItem="uou-yf-sGa" secondAttribute="leading" constant="30" id="ehZ-cg-AkS"/>
+                            <constraint firstItem="Iml-fg-ubR" firstAttribute="top" secondItem="uou-yf-sGa" secondAttribute="top" constant="30" id="jmJ-iT-aGU"/>
+                            <constraint firstItem="uou-yf-sGa" firstAttribute="trailing" secondItem="Iml-fg-ubR" secondAttribute="trailing" constant="30" id="mlY-cp-mf9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uou-yf-sGa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BxU-qT-OI8"/>
+                    <connections>
+                        <outlet property="edaysC" destination="y6B-F9-uwf" id="JCx-Fx-FPe"/>
+                        <outlet property="edaysR" destination="wcR-gG-pCn" id="uHs-bM-315"/>
+                        <outlet property="etitle" destination="CPz-lO-7Sc" id="JRM-xc-LGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fxg-Gp-izg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="798"/>
         </scene>
     </scenes>
 </document>
